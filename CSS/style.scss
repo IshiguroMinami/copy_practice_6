@@ -10,7 +10,6 @@ $color-overlay-light: rgba(255, 255, 255, 0.2);
 $color-highlight-yellow: rgba(249, 233, 6, 0.6);
 $color-highlight-red: rgba(149, 42, 38, 0.6);
 
-
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +23,7 @@ html {
 body {
   background-color: $color-bg;
   color: $color-black;
-  font-family: serif;
+  font-family: 'Noto Serif JP', serif;
 }
 a {
   color: $color-white;
@@ -49,7 +48,7 @@ li {
 }
 .wrapper {
   width: 100%;
-  max-width: 1030px;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -68,7 +67,7 @@ li {
 }
 #header .header__onlinestore {
   background: $color-overlay-light;
-  padding: 10px;
+  padding: 8px;
   position: absolute;
   left: 40px;
   bottom: 30px;
@@ -76,7 +75,7 @@ li {
 #header .header__onlinestore a {
   display: block;
   border: solid 1px $color-border;
-  padding: 30px 20px;
+  padding: 30px 18px;
 }
 #header .header__onlinestore a:hover {
   opacity: 0.7;
@@ -100,13 +99,13 @@ li {
 }
 .news__title-en {
   display: block;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 15px;
 }
 .news__title-ja {
   display: block;
-  font-size: 36px;
-  letter-spacing: 2px;
+  font-size: 2.25rem;
+  letter-spacing: 0.1em;
 }
 .news__list {
   padding: 80px 100px 0 0;
@@ -120,7 +119,7 @@ li {
   border-left: solid 1px $color-black;
 }
 .news__date {
-  font-size: 13px;
+  font-size: 0.75rem;
 }
 .news__text {
   padding-left: 30px;
@@ -135,12 +134,12 @@ li {
   line-height: 1;
 }
 .products .section__title .products__title-ja {
-  font-size: 32px;
-  letter-spacing: 2px;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
   margin-bottom: 18px;
 }
 .products .section__title .products__title-en {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .products .products__img-wrapper {
   width: 65%;
@@ -155,7 +154,6 @@ li {
   position: absolute;
   bottom: -20px;
 }
-
 // Products1
 #products1 {
   flex-direction: row-reverse;
@@ -178,13 +176,11 @@ li {
   background: $color-highlight-red;
   right: -20px;
 }
-
 // Shop
 #shop iframe {
   width: 100%;
   vertical-align: bottom;
 }
-
 // フッター
 #footer {
   background-color: $color-black;
@@ -195,7 +191,7 @@ li {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-bottom: 10px;
 }
 #footer .footer__inner .footer__left,
@@ -210,28 +206,24 @@ li {
   line-height: 2;
 }
 #footer .footer__menu {
-  font-size: 16px;
+  font-size: 1rem;
   margin-right: 60px;
 }
 #footer .footer__menu .footer__menu-item {
   margin-left: 25px;
 }
 #footer .footer__copyright {
-  font-size: 10px;
+  font-size: 0.625rem;
   text-align: center;
 }
 
 // SP
-
 @media screen and (max-width: 768px) {
   .wrapper {
     max-width: 100%;
   }
-
   // ヘッダー
-
   #header {
-    /* スマホの場合は背景画像を切り替える */
     background-image: url(https://placehold.jp/000000/a9a9a9/1920x1280.png);
     padding: 20px;
     margin-bottom: 80px;
@@ -240,13 +232,12 @@ li {
     left: 20px;
     bottom: 20px;
   }
-
   // News
   #news {
     margin-bottom: 80px;
   }
   #news .section__title .news__title-ja {
-    font-size: 30px;
+    font-size: 1.75rem;
   }
   #news .news__list {
     padding: 20px 30px 0 0;
@@ -271,7 +262,7 @@ li {
     margin-bottom: 100px;
   }
   .products .section__title .products__title-ja {
-    font-size: 15px;
+    font-size: 1.5rem;
   }
   .products .section__title .products__title-en {
     display: none;
@@ -282,7 +273,7 @@ li {
   }
   .products .products__text {
     width: 64%;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 30px 0;
   }
   // Products1
@@ -304,7 +295,7 @@ li {
     margin-left: 10px;
   }
   #footer .footer__menu {
-    font-size: 14px;
+    font-size: 0.875rem;
     margin-right: 25px;
   }
 }
