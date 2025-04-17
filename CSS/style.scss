@@ -1,0 +1,310 @@
+// BEM方式で命名
+@charset "UTF-8";
+
+$color-black: #000;
+$color-white: #fff;
+$color-bg: #e6e2d7;
+$color-border: #ccc;
+
+$color-overlay-light: rgba(255, 255, 255, 0.2);
+$color-highlight-yellow: rgba(249, 233, 6, 0.6);
+$color-highlight-red: rgba(149, 42, 38, 0.6);
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  background-color: $color-bg;
+  color: $color-black;
+  font-family: serif;
+}
+a {
+  color: $color-white;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+.header__title {
+  line-height: 1px;
+  margin-left: 60px;
+}
+.header__title a {
+  display: block;
+}
+.header__title img {
+  width: 40px;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+// ヘッダー
+#header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://placehold.jp/000000/a9a9a9/1920x1280.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 60px 80px;
+  margin-bottom: 180px;
+  position: relative;
+  writing-mode: vertical-rl;
+}
+#header .header__onlinestore {
+  background: $color-overlay-light;
+  padding: 10px;
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+}
+#header .header__onlinestore a {
+  display: block;
+  border: solid 1px $color-border;
+  padding: 30px 20px;
+}
+#header .header__onlinestore a:hover {
+  opacity: 0.7;
+}
+.header__nav,
+.nav__item {
+  margin-left: 25px;
+}
+// News
+.news {
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.news__title {
+  top: 0;
+  right: 200px;
+  font-weight: normal;
+  line-height: 1;
+  writing-mode: vertical-rl;
+}
+.news__title-en {
+  display: block;
+  font-size: 14px;
+  margin-left: 15px;
+}
+.news__title-ja {
+  display: block;
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+.news__list {
+  padding: 80px 100px 0 0;
+  writing-mode: vertical-rl;
+}
+.news__item {
+  border-right: solid 1px $color-black;
+  padding: 15px 30px 15px 5px;
+}
+.news__item:last-child {
+  border-left: solid 1px $color-black;
+}
+.news__date {
+  font-size: 13px;
+}
+.news__text {
+  padding-left: 30px;
+}
+// products
+.products {
+  display: flex;
+  margin-bottom: 180px;
+}
+.products .section__title {
+  font-weight: normal;
+  line-height: 1;
+}
+.products .section__title .products__title-ja {
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+.products .section__title .products__title-en {
+  font-size: 14px;
+}
+.products .products__img-wrapper {
+  width: 65%;
+  margin-top: 100px;
+  position: relative;
+}
+.products .products__text {
+  width: 56%;
+  color: $color-white;
+  padding: 50px 0;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+}
+
+// Products1
+#products1 {
+  flex-direction: row-reverse;
+}
+#products1 .section__title {
+  margin-left: 20px;
+  writing-mode: vertical-lr;
+}
+#products1 .products__text {
+  background: $color-highlight-yellow;
+  left: -20px;
+}
+
+// Products2
+#products2 .section__title {
+  margin-right: 20px;
+  writing-mode: vertical-rl;
+}
+#products2 .products__text {
+  background: $color-highlight-red;
+  right: -20px;
+}
+
+// Shop
+#shop iframe {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+// フッター
+#footer {
+  background-color: $color-black;
+  color: $color-white;
+  padding: 80px 80px 30px 30px;
+}
+#footer .footer__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#footer .footer__inner .footer__left,
+#footer .footer__inner .footer__right {
+  writing-mode: vertical-rl;
+}
+#footer .footer__inner .footer__logo {
+  width: 40px;
+  margin-left: 60px;
+}
+#footer .footer__inner .footer__info {
+  line-height: 2;
+}
+#footer .footer__menu {
+  font-size: 16px;
+  margin-right: 60px;
+}
+#footer .footer__menu .footer__menu-item {
+  margin-left: 25px;
+}
+#footer .footer__copyright {
+  font-size: 10px;
+  text-align: center;
+}
+
+// SP
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  // ヘッダー
+
+  #header {
+    /* スマホの場合は背景画像を切り替える */
+    background-image: url(https://placehold.jp/000000/a9a9a9/1920x1280.png);
+    padding: 20px;
+    margin-bottom: 80px;
+  }
+  #header .header__onlinestore {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  // News
+  #news {
+    margin-bottom: 80px;
+  }
+  #news .section__title .news__title-ja {
+    font-size: 30px;
+  }
+  #news .news__list {
+    padding: 20px 30px 0 0;
+  }
+  .news__item {
+    padding: 0;
+  }
+  #news .news__list .news__date {
+    padding: 15px 12px 15px 5px;
+  }
+  #news .news__list .news__item:nth-of-type(n + 4) {
+    display: none;
+  }
+  #news .news__list .news__text {
+    padding: 15px 0 15px 12px;
+  }
+  #news .news__list .news__item:nth-of-type(3) {
+    border-left: solid 1px $color-black;
+  }
+  // Products
+  .products {
+    margin-bottom: 100px;
+  }
+  .products .section__title .products__title-ja {
+    font-size: 15px;
+  }
+  .products .section__title .products__title-en {
+    display: none;
+  }
+  .products .products__img-wrapper {
+    width: 90%;
+    margin-top: 70px;
+  }
+  .products .products__text {
+    width: 64%;
+    font-size: 14px;
+    padding: 30px 0;
+  }
+  // Products1
+  #products1 .section__title {
+    margin-left: 10px;
+  }
+  // Products2
+  #products2 .section__title {
+    margin-right: 10px;
+  }
+  // フッター
+  #footer {
+    padding: 40px 20px 30px 20px;
+  }
+  #footer .footer__inner .footer__logo {
+    margin-left: 25px;
+  }
+  #footer .footer__menu .footer__menu-item {
+    margin-left: 10px;
+  }
+  #footer .footer__menu {
+    font-size: 14px;
+    margin-right: 25px;
+  }
+}
